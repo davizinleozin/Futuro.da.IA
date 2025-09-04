@@ -13,9 +13,7 @@ enunciado:
     enunciado: 
     "2. Você deixaria uma IA tomar decisões médicas críticas sobre a sua saúde?"
 alternativa: ["sim!" ,"não!"]
-
-
-}
+},
 
 
 
