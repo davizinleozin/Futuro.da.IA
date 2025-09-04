@@ -29,8 +29,4 @@ enunciado:
 "5.Você acha que a IA pode desenvolver uma consciência própria?"
 alternativa:["sim!" , "não!"]
 }
-
-
-
-
 ]
