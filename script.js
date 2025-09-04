@@ -7,12 +7,12 @@ const pergunta = [
 {
 enunciado: 
 "1. Você acredita que um dia será possível se apaixonar por uma IA como por uma pessoa real.
-   alternativa["sim!" , "não!"] 
+   alternativa["sim!" , "não!"     ] 
 },
 {
     enunciado: 
-    ""2. Você deixaria uma IA tomar decisões médicas críticas sobre a sua saúde?"
-alternativa: []
+    "2. Você deixaria uma IA tomar decisões médicas críticas sobre a sua saúde?"
+alternativa: ["sim!" ,"não!"]
 
 
 }
