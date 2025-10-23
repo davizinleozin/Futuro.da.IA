@@ -29,4 +29,45 @@ enunciado:
 "5.Você acha que a IA pode desenvolver uma consciência própria?"
 alternativa:["sim!" , "não!"]
 }
-]
+]:root {
+    --cor-fundo: #020e1b;
+    --cor-principal:#0B0D20;
+    --cor-secundaria: #3BDEFD;
+    --cor-destaque:#2BDEFD;
+    --cor-texto: #0b7d91;
+}
+
+body {
+    background-color: var(--cor-fundo);
+color: var(--cor-texto);
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+
+.caixa-principal{
+    background-color: var(--cor-principal);
+    width: 90%;
+    text-align: center;
+    padding: 20px;
+}
+
+h1{
+    color: var(--cor-destaque);
+
+}
+
+ button {
+background-color: var(--cor-secundaria);
+color: var(--cor-texto);
+border: none;
+border-radius: 15px;
+padding: 15px;
+transition: background-color 0.3s;
+}
+
+button:hover{
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+}
