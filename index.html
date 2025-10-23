@@ -1,64 +1,31 @@
-// Seleção dos elementos
-const caixaPergunta = document.querySelector(".caixa-pergunta");
-const caixaAlternativas = document.querySelector(".caixa-alternativa");
-const textoResultado = document.querySelector("#texto-resultado");
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você decide o futuro da IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-const perguntas = [
-    {
-        enunciado: "Você acredita que a IA terá um papel essencial na resolução de problemas globais, como mudanças climáticas e saúde?",
-        alternativas: ["Sim", "Não"]
-    },
-    {
-        enunciado: "Você confiaria em uma IA para tomar decisões sobre sua carreira profissional?",
-        alternativas: ["Sim", "Não"]
-    },
-    {
-        enunciado: "Você acredita que a IA pode superar a inteligência humana em áreas específicas, como ciência e tecnologia?",
-        alternativas: ["Sim", "Não"]
-    },
-    {
-        enunciado: "Você acha que a IA pode ser usada de forma ética para melhorar a qualidade de vida sem invadir a privacidade das pessoas?",
-        alternativas: ["Sim", "Não"]
-    },
-    {
-        enunciado: "Você acredita que a IA será capaz de desenvolver uma consciência própria no futuro?",
-        alternativas: ["Sim", "Não"]
-    }
-];
+    <div class="caixa-principal">
+        <h1>Você decide o futuro da IA</h1>
 
-let perguntaAtual = 0;
+        <div class="caixa-pergunta">
+            <p>O que você gostaria que a Inteligência Artificial priorizasse no futuro?</p>
+        </div>
 
-// Função para mostrar a pergunta e alternativas
-function mostrarPergunta() {
-    // Verifica se há mais perguntas
-    if (perguntaAtual < perguntas.length) {
-        const pergunta = perguntas[perguntaAtual];
-        // Exibe o enunciado
-        document.getElementById('pergunta').textContent = pergunta.enunciado;
-        // Cria botões para as alternativas
-        caixaAlternativas.innerHTML = ''; // Limpa as alternativas anteriores
-        pergunta.alternativas.forEach((alternativa) => {
-            const button = document.createElement('button');
-            button.textContent = alternativa;
-            button.onclick = () => mostrarResultado(alternativa);
-            caixaAlternativas.appendChild(button);
-        });
-    } else {
-        // Exibe o resultado final se não houver mais perguntas
-        document.getElementById('pergunta').textContent = 'Obrigado por responder!';
-        caixaAlternativas.innerHTML = '';
-    }
-}
+        <div class="caixa-alternativa">
+            <button onclick="mostrarResultado('option1')">Melhorar a qualidade de vida</button>
+            <button onclick="mostrarResultado('option2')">Resolver problemas globais</button>
+            <button onclick="mostrarResultado('option3')">Garantir segurança e ética</button>
+        </div>
 
-// Função para mostrar o resultado da escolha
-function mostrarResultado(resposta) {
-    // Exibe o texto do resultado
-    textoResultado.textContent = `Você respondeu: ${resposta}.`;
+        <div class="caixa-resultado">
+            <p id="texto-resultado">Escolha uma alternativa para ver o resultado.</p>
+        </div>
+    </div>
 
-    // Avança para a próxima pergunta
-    perguntaAtual++;
-    setTimeout(mostrarPergunta, 1000); // Aguarda 1 segundo antes de mostrar a próxima pergunta
-}
-
-// Inicia com a primeira pergunta
-mostrarPergunta();
+    <script src="script.js"></script>
+</body>
+</html>
