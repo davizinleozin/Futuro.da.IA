@@ -1,55 +1,20 @@
-/* Resetando margens e fontes */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+function mostrarResultado(opcao) {
+    let resultado;
 
-body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
+    switch (opcao) {
+        case 'option1':
+            resultado = 'Você escolheu melhorar a qualidade de vida. A IA pode ser usada para ajudar no tratamento de doenças e otimizar processos no cotidiano.';
+            break;
+        case 'option2':
+            resultado = 'Você escolheu resolver problemas globais. A IA pode ajudar a combater as mudanças climáticas e melhorar a distribuição de recursos.';
+            break;
+        case 'option3':
+            resultado = 'Você escolheu garantir segurança e ética. A IA pode ser usada para proteger dados e garantir que os sistemas operem de maneira justa.';
+            break;
+        default:
+            resultado = 'Escolha uma alternativa para ver o resultado.';
+    }
 
-.caixa-principal {
-    background-color: var(--cor-principal);
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-    color: var(--cor-destaque);
-    margin-bottom: 20px;
-}
-
-button {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto);
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
-    margin: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-    width: 100%;
-}
-
-button:hover {
-    background-color: var(--cor-destaque);
-    color: var(--cor-principal);
-}
-
-.caixa-resultado p {
-    font-size: 16px;
-    font-weight: bold;
-    color: var(--cor-texto);
-    margin-top: 20px;
+    // Atualiza o texto na página
+    document.getElementById('texto-resultado').textContent = resultado;
 }
