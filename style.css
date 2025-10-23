@@ -1,17 +1,24 @@
-:root{
---cor-fundo: #01080E;
---cor-principal:#0B0D20 ;
---cor-secundaria:#212333; 
---cor-destaque: #2BDEFD;
---cor-texto: #D7F9FF;
+:root {
+    --cor-fundo: #01080E;
+    --cor-principal: #0B0D20;
+    --cor-secundaria: #212333;
+    --cor-destaque: #2BDEFD;
+    --cor-texto: #D7F9FF;
 }
 
-bory{
-=-[]
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
 
-
-
-
-
-
+h1 {
+    color: var(--cor-destaque);
+    font-size: 36px;
+    margin-bottom: 20px;
 }
