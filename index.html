@@ -1,34 +1,46 @@
-<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+<<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Você decide o futuro da IA.</title>
-    
+    <title>Você decide o futuro da IA</title> 
 </head>
 <body>
 
     <div class="caixa-principal">
-<h1> Você decide o futuro da IA </h1>
-    <div class="caixa-pergunta"></div>
-    <div class="caixa-alternativa"></div>
-    <div class="caixa-resultado">
-      <p class="texto-resultado"></p>
-</div>
+        <h1>Você decide o futuro da IA</h1>
+        
+        <!-- Caixa da pergunta -->
+        <div class="caixa-pergunta">
+            <p id="pergunta">Qual o seu maior objetivo para a IA no futuro?</p>
+        </div>
+        
+        <!-- Caixa das alternativas -->
+        <div class="caixa-alternativa">
+            <button class="alternativa" onclick="mostrarResultado('option1')">Melhorar a qualidade de vida</button>
+            <button class="alternativa" onclick="mostrarResultado('option2')">Ajudar a resolver problemas globais</button>
+            <button class="alternativa" onclick="mostrarResultado('option3')">Garantir segurança e ética</button>
+        </div>
+        
+        <!-- Caixa do resultado -->
+        <div class="caixa-resultado">
+            <p id="texto-resultado"></p>
+        </div>
     </div>
-<script src="script.js"></script>
-</body>
-</html>
 
-
-
-
-
-
-
-
-
-    
+    <script src="script.js"></script>
 </body>
 </html>
